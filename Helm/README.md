@@ -184,7 +184,7 @@ REVISION	UPDATED                 	STATUS  	CHART        	APP VERSION	DESCRIPTION
 
 # 8. helm install 
 
-to intall helm charts
+to install helm charts
 
 `helm install exa .` or `helm install test test1` here test is the release name and test is the folder 
 
@@ -204,5 +204,36 @@ NOTES:
   echo http://$NODE_IP:$NODE_PORT
 ```
 
+# 9. helm package
+
+to package helm charts that you created to .tgz file
+
+`helm package test`
+
+You can also provide destination to have a package , also change the version 
+`helm package test --destination /home/ --version 1.2.3`
+
+there is also one inp option with --dependency-update , this will update dependency from chart.yaml to dir "charts" before packaging
+
+# 10. helm plugin
+
+to install plugin
+
+ex to install diff plugin 
+
+`helm plugin install https://github.com/databus23/helm-diff`
+
+to test helm diff 
+`helm diff upgrade exa . --values values.yaml`
+
+```
+ helm plugin list
+NAME	VERSION	DESCRIPTION                           
+diff	3.1.3  	Preview helm upgrade changes as a diff
+```
+
+# 11 . helm pull
+
+to pull any charts from chart repositories
 
 
