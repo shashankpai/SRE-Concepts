@@ -158,7 +158,8 @@ application programs do.
 ```
  cd - Changes the working directory to the previous working directory.`
 ```
- cd ~user_name Changes the working directory to the home directory of user_name.
+``` 
+cd ~user_name Changes the working directory to the home directory of user_name.
   For example, typing cd ~bob will change the directory to the home
   directory of user “bob.” 
 ```
